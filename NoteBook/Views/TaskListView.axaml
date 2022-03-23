@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+			 Height="800" Width="500"
+             x:Class="NoteBook.Views.TaskListView">
+
+	<UserControl.Styles>
+		<StyleInclude Source="/Styles/Style.axaml"/>
+	</UserControl.Styles>
+
+
+	<Grid Classes="NoteBook" ShowGridLines="True" ColumnDefinitions="*" RowDefinitions="50, *, 50">
+		<DatePicker Name="DateP" SelectedDate="{Binding CurrentDate}" Classes="Date" Grid.Row="0" Grid.Column="0"/>
+		<ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="0">
+			<ItemsControl Name="TaskList" Items="{Binding NoteList}">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Grid Classes="Note" ShowGridLines="True" ColumnDefinitions="*, 50, 50" RowDefinitions="*">
+							<TextBlock Name="TaskHeader" Classes="gridTextBlock" Text="{Binding Header}" Grid.Row="0" Grid.Column="0"/>
+							<Button Name="Observe" CommandParameter ="{Binding $self.DataContext}" Command="{Binding $parent[Window].DataContext.ObserveCommand}" Classes="gridBtn" Grid.Row="0" Grid.Column="1">
+								<Image Source="/Assets/in_zoom.ico"/>
+							</Button>
+							<Button Name="Delete" CommandParameter ="{Binding $self.DataContext}" Command="{Binding $parent[Window].DataContext.DeleteCommand}" Classes="gridBtn" Grid.Row="0" Grid.Column="2">
+								<Image Source="/Assets/trash.ico"/>
+							</Button>
+						</Grid>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</ScrollViewer>
+		<Button Name="AddTask" Classes="gridBtn" Command="{Binding $parent[Window].DataContext.openAddPage}" Grid.Row="2" Grid.Column="0">
+			<Image Source="/Assets/add.ico"/>
+		</Button>
+	</Grid>
+</UserControl>

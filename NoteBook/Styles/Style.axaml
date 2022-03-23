@@ -1,0 +1,42 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Height="100" Width="100">
+			<Button Classes="gridBtn">I</Button>
+		</Border>
+	</Design.PreviewWith>
+
+	<Style Selector="Button.gridBtn">
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="20"/>
+	</Style>
+
+	<Style Selector="Button.gridBtn:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="Orange"/>
+	</Style>
+
+	<Style Selector="TextBlock.gridTextBlock">
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="20"/>
+	</Style>
+
+	<Style Selector="TextBox.gridTextBox">
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="20"/>
+		<Setter Property="AcceptsReturn" Value="True"/>
+		<Setter Property="TextWrapping" Value="Wrap"/>
+	</Style>
+
+	<Style Selector="DatePicker.Date">
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="FontSize" Value="20"/>
+	</Style>
+</Styles>

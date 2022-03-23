@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+			 Height="800" Width="500"
+             x:Class="NoteBook.Views.TaskView">
+	<UserControl.Styles>
+		<StyleInclude Source="/Styles/Style.axaml"/>
+	</UserControl.Styles>
+
+
+	<Grid Classes="NoteBook" ShowGridLines="True" ColumnDefinitions="*" RowDefinitions="50, *, 50, 50">
+		<TextBox Name="Header" Watermark="Название" Text="{Binding Header}" Classes="gridTextBox" Grid.Row="0" Grid.Column="0"/>
+		<TextBox Name="Description" Watermark="Описание" Text="{Binding Description}" Classes="gridTextBox" Grid.Row="1" Grid.Column="0"/>
+		<Button Name="Ok"  Content="Ok" Command="{Binding AddCommand}" Classes="gridBtn" Grid.Row="2" Grid.Column="0"/>
+		<Button Name="Cancel"  Content="Cancel" Command="{Binding CancelCommand}" Classes="gridBtn" Grid.Row="3" Grid.Column="0"/>
+	</Grid>
+
+</UserControl>
