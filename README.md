@@ -1,2 +1,2 @@
 # Notes
- This is my curswork for visual programming Qt C++
+ This is my curswork for visual programming on Qt C++

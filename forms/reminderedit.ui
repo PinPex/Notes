@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReminderEdit</class>
+ <widget class="QWidget" name="ReminderEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>437</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="3">
+    <widget class="QCalendarWidget" name="calendarWidget"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QTimeEdit" name="timeEdit"/>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Отмена</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Подтвердить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
